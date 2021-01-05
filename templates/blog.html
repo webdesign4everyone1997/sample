@@ -1,0 +1,75 @@
+{% extends 'index.html' %}
+{% load static}
+{% block title %}Blog page!{% endblock %}
+{% block content %}
+
+<header>
+    <h1 class="text-center" style="color: rgb(170, 208, 240); margin: 10px auto 20px; display: block;">Recipes</h1>
+      
+</header>
+     
+   
+<section>
+    <div class="container-fluid">
+        <div class="container-fluid">
+            <div class="row" style="background-color: rgb(170, 208, 240); ">
+                <div class="col-md-12" style="margin: 0 auto;">
+                    <img src="/static/cheesecake.jpg" class="rounded" alt="Responsive image" style="margin: 10px auto 20px; display: block;">
+                </div>
+            </div>
+        </div>        
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-none">
+        <h3 class="entry-title margin-bottom-half"><a href="#">Raspberry Cheesecake</a></h3>
+        <p class="margin-top-half">When I was younger I loved pancakes. Excuse me, I loved MAPLE SYRUP. Pancakes were a way to get as much maple syrup on my plate, my hands, and my face.</p>       
+        
+        <div class="wp-block-buttons">
+            <a target="_blank" class="btn btn-info pull-right"  href="http://localhost:8000/recipe1">Continue reading</a>   
+        </div>
+
+        <br>
+        <br>
+        <br>
+        
+        <div class="container-fluid">
+            <div class="row" style="background-color: rgb(170, 208, 240); ">
+                <div class="col-md-12" style="margin: 0 auto;">
+                    <img src="/static/cookie.jpg" class="rounded" alt="Responsive image" style="margin: 10px auto 20px; display: block;">
+                </div>
+            </div>
+        </div>
+             
+        <br>
+        <br>
+        <br>   
+           
+        <h3 class="entry-title margin-bottom-half"><a href="#">Cookies</a></h3>
+        <p>When I was younger I loved pancakes. Excuse me, I loved MAPLE SYRUP. Pancakes were a way to get as much ma</p>
+             
+        <div class="wp-block-buttons">
+            <a target="_blank" class="btn btn-info pull-right" href="http://localhost:8000/recipe2">Continue reading</a>
+        </div>
+        
+        <br>
+        <br>
+        <br>
+        
+        <p></p>
+        </div> 
+
+</section>
+    
+<footer>              
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="Ordering.html">Ordering</a>
+        <a href="About.html">About</a>
+        <a href="ContactUs.html">ContactUs</a>
+    </nav>            
+              
+</footer>
+{%endblock%}

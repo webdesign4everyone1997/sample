@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+{% block title %}My from 2 page!{% endblock %}
+{% block content %}
+    <h1>This is Login page</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12" style="margin: 0 auto;">
+                {% if success == True %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert" style="margin-top: 1rem;">
+                    <strong>{{successmsg}}</strong> 
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                {% endif %}
+
+                {% if error == True %}
+                <div class="alert alert-danger alert-dismissible fade show" role="alert" style="margin-top: 1rem;">
+                    <strong>{{errorsmsg}}</strong> 
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                {% endif %}
+
+                 <form method="POST">
+                    {% csrf_token %}
+                     {{form.as_p}}
+                     <p class="text-muted">Note: Password should be more than 5 words and contain characters like @,#,$,%</p>
+                    <button type="submit" class="btn btn-primary">Login</button>        
+                    <a target="_blank" href="http://localhost:8000/forgotpassword">Forgot Password</a>
+                 </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
